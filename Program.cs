@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MongoDB.Bson;
+using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,8 +12,10 @@ namespace Testing
     {
         static void Main(string[] args)
         {
-            string date1 = DateTime.Now.ToUniversalTime().ToString();
-            string date2 = DateTime.UtcNow.ToString();
+            JObject DTO = null;
+           string a = DTO.ToJson();
+            Console.WriteLine(a);
+            Console.ReadLine();
         }
     }
 }
